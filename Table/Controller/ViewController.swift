@@ -14,14 +14,22 @@ final class ViewController: UIViewController {
 //MARK: Methods
     private func createTableView() {
         myTableView = UITableView(frame: view.bounds, style: .plain)
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifire)
+        myTableView.register(MyTableViewCell.self, forCellReuseIdentifier: cellIdentifire)
         
         myTableView.delegate = self
         myTableView.dataSource = self
         
         myTableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
+        myTableView.estimatedRowHeight = 44
+        myTableView.rowHeight = UITableView.automaticDimension
+        
         view.addSubview(myTableView)
+    }
+    
+    private func forMethods() {
+        createTableView()
+        loadData()
     }
 //MARK: JSON
     private func loadData() {
@@ -43,34 +51,27 @@ final class ViewController: UIViewController {
                 }
             }.resume()
         }
-    
-    private func forMethods() {
-        createTableView()
-        loadData()
-    }
 }
 //MARK: UITableViewDataSource
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire, for: indexPath) as? MyTableViewCell else { return UITableViewCell()}
         
         let item = dataArray[indexPath.row]
         
-        cell.textLabel?.text = "id -\(item.id ?? 0)"
-        cell.textLabel?.text = "postID - \(item.postID ?? 0)"
-        cell.textLabel?.text = "email - \(item.email ?? "")"
-        cell.textLabel?.text = "body -\(item.body ?? "")"
-        cell.textLabel?.text = "name - \(item.name ?? "")"
-        
+        cell.refrech(item)
+     
         return cell
     }
+}
 //MARK: UITableViewDelegate
+extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 200.0
     }
 }

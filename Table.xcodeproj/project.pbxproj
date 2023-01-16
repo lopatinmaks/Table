@@ -14,9 +14,8 @@
 		77300011296ED4BD001A191B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7730000F296ED4BD001A191B /* LaunchScreen.storyboard */; };
 		77300019296FEB06001A191B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 77300018296FEB06001A191B /* .gitignore */; };
 		7730001C296FEE0F001A191B /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730001B296FEE0F001A191B /* Contacts.swift */; };
-		7730001E29700085001A191B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730001D29700085001A191B /* ContactsTableViewController.swift */; };
-		77300020297001B9001A191B /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730001F297001B9001A191B /* DataTableViewCell.swift */; };
 		773000282971CEF6001A191B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773000272971CEF6001A191B /* ViewController.swift */; };
+		7730002A29754E97001A191B /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730002929754E96001A191B /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +28,8 @@
 		77300012296ED4BD001A191B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77300018296FEB06001A191B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7730001B296FEE0F001A191B /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
-		7730001D29700085001A191B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
-		7730001F297001B9001A191B /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		773000272971CEF6001A191B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7730002929754E96001A191B /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,7 @@
 		7730002129701737001A191B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7730001F297001B9001A191B /* DataTableViewCell.swift */,
+				7730002929754E96001A191B /* MyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				773000272971CEF6001A191B /* ViewController.swift */,
-				7730001D29700085001A191B /* ContactsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,10 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7730002A29754E97001A191B /* MyTableViewCell.swift in Sources */,
 				773000282971CEF6001A191B /* ViewController.swift in Sources */,
 				7730001C296FEE0F001A191B /* Contacts.swift in Sources */,
-				77300020297001B9001A191B /* DataTableViewCell.swift in Sources */,
-				7730001E29700085001A191B /* ContactsTableViewController.swift in Sources */,
 				77300005296ED4B7001A191B /* AppDelegate.swift in Sources */,
 				77300007296ED4B7001A191B /* SceneDelegate.swift in Sources */,
 			);
